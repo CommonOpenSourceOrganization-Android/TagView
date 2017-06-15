@@ -249,7 +249,8 @@ public class TagView extends RelativeLayout {
 
             if (mWidth <= total + tagWidth + Utils.dipToPx(this.getContext(), Constants.LAYOUT_WIDTH_OFFSET)) {
                 //need to add in new line
-                if (tagPre != null) tagParams.addRule(RelativeLayout.BELOW, indexBottom);
+                if (tagPre != null)
+                    tagParams.addRule(RelativeLayout.BELOW, indexBottom);
                 // initialize total param (layout padding left & layout padding right)
                 total = getPaddingLeft() + getPaddingRight();
                 indexBottom = listIndex;
@@ -312,7 +313,8 @@ public class TagView extends RelativeLayout {
     }
 
     public void addTags(List<Tag> tags) {
-        if (tags == null) return;
+        if (tags == null)
+            return;
         mTags = new ArrayList<>();
         if (tags.isEmpty())
             drawTags();
@@ -324,7 +326,8 @@ public class TagView extends RelativeLayout {
 
 
     public void addTags(String[] tags) {
-        if (tags == null) return;
+        if (tags == null)
+            return;
         for (String item : tags) {
             Tag tag = new Tag(item);
             mTags.add(tag);
